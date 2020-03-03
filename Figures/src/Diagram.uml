@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="754.4583333333333" y="278.5">entity.Figure1D</node>
+    <node x="214.49999999999994" y="212.0">entity.Figure2D</node>
+    <node x="0.0" y="445.0">entity.SymmetricFigure</node>
+    <node x="651.5" y="712.5">entity.Section</node>
+    <node x="260.49999999999994" y="0.0">entity.Figure</node>
+    <node x="829.5" y="712.5">entity.Ray</node>
+    <node x="223.0" y="434.0">entity.Polygon</node>
+    <node x="587.9999999999999" y="880.0">entity.MultiLine</node>
+    <node x="428.0" y="445.0">entity.Circle</node>
+    <node x="803.0" y="434.0">entity.Buffer</node>
+    <node x="1007.5" y="712.5">entity.Line</node>
+    <node x="419.5" y="668.0">entity.Ellipse</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="entity.MultiLine" target="entity.Section">
+      <point x="78.33333333333337" y="-81.0" />
+      <point x="783.8333333333333" y="855.0" />
+      <point x="770.0" y="855.0" />
+      <point x="39.5" y="36.5" />
+    </edge>
+    <edge source="entity.Figure1D" target="entity.Figure">
+      <point x="0.0" y="-14.5" />
+      <point x="802.4583333333333" y="187.0" />
+      <point x="436.33333333333326" y="187.0" />
+      <point x="70.33333333333331" y="81.0" />
+    </edge>
+    <edge source="entity.Figure2D" target="entity.Figure">
+      <point x="50.5" y="-81.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="entity.Buffer" target="entity.Figure1D">
+      <point x="0.0" y="-92.0" />
+      <point x="908.5" y="414.0" />
+      <point x="826.4583333333333" y="414.0" />
+      <point x="24.0" y="14.5" />
+    </edge>
+    <edge source="entity.Ray" target="entity.Buffer">
+      <point x="39.5" y="-36.5" />
+      <point x="948.0" y="648.0" />
+      <point x="926.0833333333334" y="648.0" />
+      <point x="17.58333333333337" y="92.0" />
+    </edge>
+    <edge source="entity.Ellipse" target="entity.Circle">
+      <point x="52.75" y="-81.0" />
+      <point x="577.75" y="648.0" />
+      <point x="573.5" y="648.0" />
+      <point x="48.5" y="81.0" />
+    </edge>
+    <edge source="entity.MultiLine" target="entity.Figure1D">
+      <point x="-78.33333333333326" y="-81.0" />
+      <point x="627.1666666666666" y="855.0" />
+      <point x="641.0" y="855.0" />
+      <point x="641.0" y="414.0" />
+      <point x="778.4583333333333" y="414.0" />
+      <point x="-24.0" y="14.5" />
+    </edge>
+    <edge source="entity.Line" target="entity.Buffer">
+      <point x="-39.5" y="-36.5" />
+      <point x="1047.0" y="648.0" />
+      <point x="961.25" y="648.0" />
+      <point x="52.75" y="92.0" />
+    </edge>
+    <edge source="entity.SymmetricFigure" target="entity.Figure2D">
+      <point x="50.75" y="-81.0" />
+      <point x="152.25" y="404.0" />
+      <point x="264.99999999999994" y="404.0" />
+      <point x="-50.5" y="81.0" />
+    </edge>
+    <edge source="entity.Polygon" target="entity.Figure2D">
+      <point x="-46.25" y="-92.0" />
+      <point x="269.25" y="414.0" />
+      <point x="298.66666666666663" y="414.0" />
+      <point x="-16.833333333333314" y="81.0" />
+    </edge>
+    <edge source="entity.Section" target="entity.Buffer">
+      <point x="-39.5" y="-36.5" />
+      <point x="691.0" y="638.0" />
+      <point x="820.5833333333334" y="638.0" />
+      <point x="-87.91666666666663" y="92.0" />
+    </edge>
+    <edge source="entity.Circle" target="entity.Figure2D">
+      <point x="-48.5" y="-81.0" />
+      <point x="476.5" y="404.0" />
+      <point x="365.99999999999994" y="404.0" />
+      <point x="50.5" y="81.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="334.15079365079373" y="475.1428571428571" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
