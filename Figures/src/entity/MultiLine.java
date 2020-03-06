@@ -31,8 +31,8 @@ public class MultiLine extends Figure1D {
     }
 
     @Override
-    public Point[] location() {
-        return new Point[0];
+    public Point location() {
+        return null;
     }
 
     @Override

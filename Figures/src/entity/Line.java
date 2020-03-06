@@ -19,9 +19,4 @@ public class Line extends Buffer {
     @Override
     public void draw() {
     }
-
-    @Override
-    public Point[] location() {
-        return new Point[0];
-    }
 }

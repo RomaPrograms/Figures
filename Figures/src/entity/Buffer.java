@@ -39,4 +39,9 @@ public abstract class Buffer extends Figure1D {
     @Override
     public void move(Point newPoint) {
     }
+
+    @Override
+    public Point location() {
+        return null;
+    }
 }

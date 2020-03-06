@@ -19,9 +19,4 @@ public class Ray extends Buffer {
     @Override
     public void draw() {
     }
-
-    @Override
-    public Point[] location() {
-        return new Point[0];
-    }
 }

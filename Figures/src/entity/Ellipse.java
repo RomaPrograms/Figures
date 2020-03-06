@@ -7,17 +7,27 @@ import java.awt.*;
  * @version 1.0
  * @created 01-Mar-2020 3:05:04 PM
  */
-public class Ellipse extends Circle {
+public class Ellipse extends Figure2D {
 
+    private Point firstPoint;
     private Point secondPoint;
 
     public Ellipse() {
     }
 
-    public Ellipse(Color borderColor, Point center,
-                   Color innerColor, Point secondPoint) {
+    public Ellipse(Color borderColor, Point center, Color innerColor,
+                   Point firstPoint, Point secondPoint) {
         super(borderColor, center, innerColor);
+        this.firstPoint = firstPoint;
         this.secondPoint = secondPoint;
+    }
+
+    public Point getFirstPoint() {
+        return firstPoint;
+    }
+
+    public void setFirstPoint(Point firstPoint) {
+        this.firstPoint = firstPoint;
     }
 
     public Point getSecondPoint() {
@@ -31,11 +41,6 @@ public class Ellipse extends Circle {
     @Override
     public void draw() {
 
-    }
-
-    @Override
-    public Point[] location() {
-        return new Point[1];
     }
 
     @Override

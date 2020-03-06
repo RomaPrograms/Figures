@@ -28,7 +28,7 @@ public abstract class Figure {
 
     public abstract void draw();
 
-    public abstract Point[] location();
+    public abstract Point location();
 
     public abstract void move(Point newPoint);
 

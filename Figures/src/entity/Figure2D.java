@@ -37,4 +37,9 @@ public abstract class Figure2D extends Figure {
     public void setCenter(Point center) {
         this.center = center;
     }
+
+    @Override
+    public Point location() {
+        return null;
+    }
 }

@@ -38,6 +38,6 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Canvas id="canvasId" height="369.0" width="601.0" />
+      <Canvas id="canvasId" fx:id="canvasId" height="369.0" width="601.0" />
    </children>
 </VBox>

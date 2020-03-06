@@ -1,6 +1,7 @@
 package entity;
 
 import java.awt.*;
+import java.util.List;
 
 /**
  * @author ������������
@@ -9,39 +10,29 @@ import java.awt.*;
  */
 public class Polygon extends Figure2D {
 
-    private Point[] points;
+    private List<Point> points;
 
     public Polygon() {
     }
 
     public Polygon(Color borderColor, Point center,
-                   Color innerColor, Point[] points) {
+                   Color innerColor, List<Point> points) {
         super(borderColor, center, innerColor);
         this.points = points;
     }
 
-    public Point[] getPoints() {
+    public List<Point> getPoints() {
         return points;
     }
 
-    public void setPoints(Point[] points) {
+    public void setPoints(List<Point> points) {
         this.points = points;
     }
 
     public void draw() {
     }
 
-    @Override
-    public Point[] location() {
-        return new Point[0];
-    }
-
-    public int getPointAmount() {
-        return points.length;
-    }
-
     public void move(Point newPoint) {
 
     }
-
 }
