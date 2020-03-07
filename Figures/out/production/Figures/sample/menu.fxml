@@ -56,7 +56,7 @@
                   <Font name="System Italic" size="18.0" />
                </font>
             </Label>
-            <ColorPicker fx:id="borderColorPicker" maxWidth="130.0" minHeight="30.0" minWidth="130.0" onDragDone="#borderColorPicked" prefHeight="30.0" />
+            <ColorPicker fx:id="borderColorPicker" maxWidth="130.0" minHeight="30.0" minWidth="130.0" onAction="#borderColorPicked" prefHeight="30.0" />
             <Separator orientation="VERTICAL" prefHeight="200.0" />
             <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="165.0" text="Choose inner color: ">
                <font>

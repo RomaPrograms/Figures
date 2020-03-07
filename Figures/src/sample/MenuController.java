@@ -60,6 +60,7 @@ public class MenuController implements Initializable {
             } else {
                 label.setText(CHOOSE_SOME_FIGURE);
             }
+            System.out.println(e.getX() + "   " + e.getY());
         });
     }
 

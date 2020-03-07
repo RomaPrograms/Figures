@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Corrected structure of entity classes.">
-      <change afterPath="$PROJECT_DIR$/src/entity/FigureType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Step.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Added ellipse and circle controllers.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Figures/sample/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Figures/sample/menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Buffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Buffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Circle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Ellipse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Figure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Figure2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Figure2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/MultiLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/MultiLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Polygon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Ray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Section.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/SymmetricFigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/SymmetricFigure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Triangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/menu.fxml" afterDir="false" />
     </list>
@@ -108,16 +93,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="1" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="67" />
+          <entry key="JAVA" value="74" />
           <entry key="UML" value="1" />
-          <entry key="XML" value="6" />
+          <entry key="XML" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4531" />
-          <entry key="PLAIN_TEXT" value="85" />
+          <entry key="JAVA" value="4680" />
+          <entry key="PLAIN_TEXT" value="124" />
         </counts>
       </usages-collector>
     </session>
@@ -140,56 +126,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/Buffer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#896#897#0" expanded="true" />
-                <element signature="e#923#924#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/Ray.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/Line.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/Section.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entity/Figure2D.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="130">
@@ -202,10 +138,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/javafx/event/Event.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="197" selection-start-line="197" selection-end-line="197" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/javafx/scene/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="8413" selection-start-line="8413" selection-end-line="8413" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/entity/Ellipse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
+            <state relative-caret-position="349">
+              <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -216,8 +170,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/MenuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1644">
-              <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+            <state relative-caret-position="381">
+              <caret line="106" column="68" lean-forward="true" selection-start-line="106" selection-start-column="68" selection-end-line="106" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -225,21 +179,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/menu.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/javafx/scene/Scene.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="2494" selection-start-line="2494" selection-end-line="2494" />
             </state>
           </provider>
         </entry>
@@ -292,9 +245,9 @@
         <option value="$PROJECT_DIR$/src/entity/Ray.java" />
         <option value="$PROJECT_DIR$/src/entity/Line.java" />
         <option value="$PROJECT_DIR$/src/entity/Section.java" />
-        <option value="$PROJECT_DIR$/src/entity/Ellipse.java" />
-        <option value="$PROJECT_DIR$/src/sample/MenuController.java" />
         <option value="$PROJECT_DIR$/src/sample/menu.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/MenuController.java" />
+        <option value="$PROJECT_DIR$/src/entity/Ellipse.java" />
       </list>
     </option>
   </component>
@@ -374,7 +327,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583579566584" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583601676003" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -485,7 +438,7 @@
       <workItem from="1583064591041" duration="10279000" />
       <workItem from="1583133910426" duration="7843000" />
       <workItem from="1583158402504" duration="247000" />
-      <workItem from="1583237609577" duration="20930000" />
+      <workItem from="1583237609577" duration="23395000" />
     </task>
     <task id="LOCAL-00001" summary="Corrected structure of entity classes.">
       <created>1583499046201</created>
@@ -494,17 +447,24 @@
       <option name="project" value="LOCAL" />
       <updated>1583499046201</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added ellipse and circle controllers.">
+      <created>1583579629065</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583579629065</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40601000" />
+    <option name="totallyTimeSpent" value="43066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18456376" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18456376" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -514,8 +474,8 @@
       <window_info id="simpleUML" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.008510638" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21985815" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.18297872" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -553,16 +513,17 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Corrected structure of entity classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected structure of entity classes." />
+    <MESSAGE value="Added ellipse and circle controllers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ellipse and circle controllers." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/sample/MenuController.java</url>
-          <line>164</line>
+          <line>150</line>
           <properties />
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -856,30 +817,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Figure2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="125">
+          <caret line="1657" selection-start-line="1657" selection-end-line="1657" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#66921#66922#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Ellipse.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/javafx/scene/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="132">
+          <caret line="8413" selection-start-line="8413" selection-end-line="8413" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/javafx/event/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/javafx-src.zip!/javafx/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="2494" selection-start-line="2494" selection-end-line="2494" />
         </state>
       </provider>
     </entry>
@@ -893,21 +858,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MenuController.java">
+    <entry file="file://$PROJECT_DIR$/src/entity/Figure2D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1644">
-          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+        <state relative-caret-position="130">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/menu.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="575">
+        <state relative-caret-position="1105">
           <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="106" column="68" lean-forward="true" selection-start-line="106" selection-start-column="68" selection-end-line="106" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Ellipse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

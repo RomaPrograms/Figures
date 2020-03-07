@@ -44,9 +44,10 @@ public class Ellipse extends Figure2D {
     @Override
     public void draw(Canvas canvas) {
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
-        graphicsContext.setLineWidth(4);
-        graphicsContext.setStroke(Color.BLACK);
-        graphicsContext.fillOval(getCenter().getX(), getCenter().getY(), widthX, widthY);
+        graphicsContext.setLineWidth(6);
+        graphicsContext.setStroke(this.getBorderColor());
+        graphicsContext.setFill(this.getInnerColor());
+        graphicsContext.fillOval(getCenter().getX(), getCenter().getY(), widthX*2, widthY*2);
     }
 
     @Override
