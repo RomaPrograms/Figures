@@ -1,5 +1,9 @@
 package entity;
 
+
+import javafx.scene.canvas.Canvas;
+import javafx.scene.paint.Color;
+
 import java.awt.*;
 
 /**
@@ -26,7 +30,7 @@ public abstract class Figure {
         this.borderColor = borderColor;
     }
 
-    public abstract void draw();
+    public abstract void draw(Canvas canvas);
 
     public abstract Point location();
 

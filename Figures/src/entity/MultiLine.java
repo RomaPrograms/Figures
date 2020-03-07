@@ -2,6 +2,7 @@ package entity;
 
 import java.awt.*;
 import java.util.List;
+import javafx.scene.canvas.Canvas;
 
 /**
  * @author ������������
@@ -27,7 +28,7 @@ public class MultiLine extends Figure1D {
     }
 
     @Override
-    public void draw() {
+    public void draw(Canvas canvas) {
     }
 
     @Override

@@ -1,6 +1,9 @@
 package entity;
 
 import java.awt.*;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 
 /**
  * @author ������������
@@ -9,38 +12,41 @@ import java.awt.*;
  */
 public class Ellipse extends Figure2D {
 
-    private Point firstPoint;
-    private Point secondPoint;
+    private double widthX;
+    private double widthY;
 
     public Ellipse() {
     }
 
     public Ellipse(Color borderColor, Point center, Color innerColor,
-                   Point firstPoint, Point secondPoint) {
+                   double widthX, double widthY) {
         super(borderColor, center, innerColor);
-        this.firstPoint = firstPoint;
-        this.secondPoint = secondPoint;
+        this.widthX = widthX;
+        this.widthY = widthY;
     }
 
-    public Point getFirstPoint() {
-        return firstPoint;
+    public double getWidthX() {
+        return widthX;
     }
 
-    public void setFirstPoint(Point firstPoint) {
-        this.firstPoint = firstPoint;
+    public void setWidthX(double widthX) {
+        this.widthX = widthX;
     }
 
-    public Point getSecondPoint() {
-        return secondPoint;
+    public double getWidthY() {
+        return widthY;
     }
 
-    public void setSecondPoint(Point secondPoint) {
-        this.secondPoint = secondPoint;
+    public void setWidthY(double widthY) {
+        this.widthY = widthY;
     }
 
     @Override
-    public void draw() {
-
+    public void draw(Canvas canvas) {
+        GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
+        graphicsContext.setLineWidth(4);
+        graphicsContext.setStroke(Color.BLACK);
+        graphicsContext.fillOval(getCenter().getX(), getCenter().getY(), widthX, widthY);
     }
 
     @Override

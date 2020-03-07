@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/entity/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Triangle.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Corrected structure of entity classes.">
+      <change afterPath="$PROJECT_DIR$/src/entity/FigureType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Step.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Diagram.uml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Figures/sample/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Figures/sample/menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Buffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Buffer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Circle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Ellipse.java" afterDir="false" />
@@ -17,8 +16,10 @@
       <change beforePath="$PROJECT_DIR$/src/entity/MultiLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/MultiLine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Polygon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Ray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Section.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Section.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/SymmetricFigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/SymmetricFigure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Triangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/menu.fxml" afterDir="false" />
     </list>
@@ -108,14 +109,15 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="21" />
+          <entry key="JAVA" value="67" />
           <entry key="UML" value="1" />
-          <entry key="XML" value="2" />
+          <entry key="XML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="492" />
+          <entry key="JAVA" value="4531" />
+          <entry key="PLAIN_TEXT" value="85" />
         </counts>
       </usages-collector>
     </session>
@@ -128,144 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entity/Circle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/MenuController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Diagram.uml">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement />
-              <nodes>
-                <node x="515.0089285714286" y="289.5">entity.Figure1D</node>
-                <node x="106.25" y="212.0">entity.Figure2D</node>
-                <node x="446.0" y="724.5">entity.Section</node>
-                <node x="0.0" y="702.0">entity.SymmetricFigure</node>
-                <node x="152.25" y="0.0">entity.Figure</node>
-                <node x="595.0" y="724.5">entity.Ray</node>
-                <node x="9.0" y="479.0">entity.Polygon</node>
-                <node x="362.00892857142856" y="848.0">entity.MultiLine</node>
-                <node x="268.7321428571429" y="735.5">entity.Circle</node>
-                <node x="554.0" y="446.0">entity.Buffer</node>
-                <node x="744.0" y="724.5">entity.Line</node>
-                <node x="214.0" y="446.0">entity.Ellipse</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="entity.MultiLine" target="entity.Section">
-                  <point x="78.33333333333337" y="-81.0" />
-                  <point x="557.8422619047619" y="823.0" />
-                  <point x="542.75" y="823.0" />
-                  <point x="32.25" y="25.5" />
-                </edge>
-                <edge source="entity.Figure1D" target="entity.Figure">
-                  <point x="0.0" y="-14.5" />
-                  <point x="563.0089285714286" y="187.0" />
-                  <point x="328.0833333333333" y="187.0" />
-                  <point x="70.33333333333331" y="81.0" />
-                </edge>
-                <edge source="entity.Figure2D" target="entity.Figure">
-                  <point x="50.5" y="-92.0" />
-                  <point x="0.0" y="81.0" />
-                </edge>
-                <edge source="entity.Circle" target="entity.Ellipse">
-                  <point x="19.25" y="-14.5" />
-                  <point x="326.4821428571429" y="682.0" />
-                  <point x="372.25" y="682.0" />
-                  <point x="52.75" y="103.0" />
-                </edge>
-                <edge source="entity.MultiLine" target="entity.Figure1D">
-                  <point x="-78.33333333333331" y="-81.0" />
-                  <point x="401.1755952380952" y="823.0" />
-                  <point x="435.5" y="823.0" />
-                  <point x="435.5" y="421.0" />
-                  <point x="539.0089285714286" y="421.0" />
-                  <point x="-24.0" y="14.5" />
-                </edge>
-                <edge source="entity.Line" target="entity.Buffer">
-                  <point x="32.25" y="-25.5" />
-                  <point x="840.75" y="672.0" />
-                  <point x="747.4166666666666" y="672.0" />
-                  <point x="87.91666666666663" y="103.0" />
-                </edge>
-                <edge source="entity.Polygon" target="entity.Figure2D">
-                  <point x="-46.25" y="-70.0" />
-                  <point x="55.25" y="421.0" />
-                  <point x="131.5" y="421.0" />
-                  <point x="-75.75" y="92.0" />
-                </edge>
-                <edge source="entity.Buffer" target="entity.Figure1D">
-                  <point x="0.0" y="-103.0" />
-                  <point x="659.5" y="421.0" />
-                  <point x="587.0089285714286" y="421.0" />
-                  <point x="24.0" y="14.5" />
-                </edge>
-                <edge source="entity.Ellipse" target="entity.Figure2D">
-                  <point x="52.75" y="-103.0" />
-                  <point x="372.25" y="421.0" />
-                  <point x="283.0" y="421.0" />
-                  <point x="75.75" y="92.0" />
-                </edge>
-                <edge source="entity.Ray" target="entity.Buffer">
-                  <point x="32.25" y="-25.5" />
-                  <point x="691.75" y="682.0" />
-                  <point x="677.0833333333334" y="682.0" />
-                  <point x="17.58333333333337" y="103.0" />
-                </edge>
-                <edge source="entity.SymmetricFigure" target="entity.Polygon">
-                  <point x="-50.75" y="-48.0" />
-                  <point x="50.75" y="682.0" />
-                  <point x="55.25" y="682.0" />
-                  <point x="-46.25" y="70.0" />
-                </edge>
-                <edge source="entity.Section" target="entity.Buffer">
-                  <point x="-32.25" y="-25.5" />
-                  <point x="478.25" y="672.0" />
-                  <point x="571.5833333333334" y="672.0" />
-                  <point x="-87.91666666666663" y="103.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.9158192090395478" x="118.597867926949" y="557.0604565083282" />
-              <SelectedNodes>
-                <node>entity.Figure1D</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Fields</Category>
-                <Category>Methods</Category>
-              </Categories>
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/Section.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/entity/Triangle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            <state relative-caret-position="170">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -274,10 +140,48 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/Rectangle.java">
+        <entry file="file://$PROJECT_DIR$/src/entity/Buffer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="66" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="66" />
+            <state relative-caret-position="51">
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
+                <element signature="e#923#924#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/Ray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/Line.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entity/Section.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -288,48 +192,54 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entity/Figure2D.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="20" />
+            <state relative-caret-position="130">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
               <folding>
-                <element signature="e#627#628#0" expanded="true" />
-                <element signature="e#656#657#0" expanded="true" />
-                <element signature="e#699#700#0" expanded="true" />
-                <element signature="e#735#736#0" expanded="true" />
-                <element signature="e#780#781#0" expanded="true" />
-                <element signature="e#807#808#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/Polygon.java">
+        <entry file="file://$PROJECT_DIR$/src/entity/Ellipse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+            <state relative-caret-position="481">
+              <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#478#479#0" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
-                <element signature="e#556#557#0" expanded="true" />
-                <element signature="e#592#593#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/SymmetricFigure.java">
+        <entry file="file://$PROJECT_DIR$/src/sample/MenuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+            <state relative-caret-position="-1644">
+              <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#227#228#0" expanded="true" />
-                <element signature="e#252#253#0" expanded="true" />
-                <element signature="e#300#301#0" expanded="true" />
-                <element signature="e#337#338#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/menu.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -341,6 +251,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -366,22 +277,24 @@
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/line_drawer/LineController.java" />
         <option value="$PROJECT_DIR$/src/entity/Figure1D.java" />
-        <option value="$PROJECT_DIR$/src/sample/menu.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/MenuController.java" />
-        <option value="$PROJECT_DIR$/src/entity/Figure.java" />
-        <option value="$PROJECT_DIR$/src/entity/Section.java" />
-        <option value="$PROJECT_DIR$/src/entity/Ray.java" />
-        <option value="$PROJECT_DIR$/src/entity/Line.java" />
-        <option value="$PROJECT_DIR$/src/entity/Buffer.java" />
+        <option value="$PROJECT_DIR$/src/entity/Foursquare.java" />
+        <option value="$PROJECT_DIR$/src/entity/FigureType.java" />
+        <option value="$PROJECT_DIR$/src/entity/STEP.java" />
         <option value="$PROJECT_DIR$/src/entity/MultiLine.java" />
+        <option value="$PROJECT_DIR$/src/entity/Figure.java" />
         <option value="$PROJECT_DIR$/src/entity/Figure2D.java" />
-        <option value="$PROJECT_DIR$/src/entity/Ellipse.java" />
-        <option value="$PROJECT_DIR$/src/entity/SymmetricFigure.java" />
-        <option value="$PROJECT_DIR$/src/entity/Circle.java" />
         <option value="$PROJECT_DIR$/src/entity/Polygon.java" />
         <option value="$PROJECT_DIR$/src/entity/Rectangle.java" />
+        <option value="$PROJECT_DIR$/src/entity/SymmetricFigure.java" />
         <option value="$PROJECT_DIR$/src/entity/Triangle.java" />
-        <option value="$PROJECT_DIR$/src/entity/Foursquare.java" />
+        <option value="$PROJECT_DIR$/src/entity/Circle.java" />
+        <option value="$PROJECT_DIR$/src/entity/Buffer.java" />
+        <option value="$PROJECT_DIR$/src/entity/Ray.java" />
+        <option value="$PROJECT_DIR$/src/entity/Line.java" />
+        <option value="$PROJECT_DIR$/src/entity/Section.java" />
+        <option value="$PROJECT_DIR$/src/entity/Ellipse.java" />
+        <option value="$PROJECT_DIR$/src/sample/MenuController.java" />
+        <option value="$PROJECT_DIR$/src/sample/menu.fxml" />
       </list>
     </option>
   </component>
@@ -399,9 +312,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
+    <option name="x" value="-10" />
+    <option name="width" value="979" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -458,13 +371,14 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583498400777" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583579566584" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
@@ -571,18 +485,26 @@
       <workItem from="1583064591041" duration="10279000" />
       <workItem from="1583133910426" duration="7843000" />
       <workItem from="1583158402504" duration="247000" />
-      <workItem from="1583237609577" duration="6847000" />
+      <workItem from="1583237609577" duration="20930000" />
     </task>
+    <task id="LOCAL-00001" summary="Corrected structure of entity classes.">
+      <created>1583499046201</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583499046201</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26518000" />
+    <option name="totallyTimeSpent" value="40601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.16174497" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18456376" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -591,8 +513,8 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="simpleUML" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13617021" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.008510638" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -603,7 +525,7 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.31207597" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.31205675" />
       <window_info anchor="bottom" id="CheckStyle" order="14" />
       <window_info anchor="bottom" id="SonarLint" order="15" />
       <window_info anchor="bottom" id="JProfiler" order="16" />
@@ -630,6 +552,20 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <MESSAGE value="Corrected structure of entity classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected structure of entity classes." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/MenuController.java</url>
+          <line>164</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -637,13 +573,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/sample/WindowCloser.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/RegularPolygon.java" />
     <entry file="file://$PROJECT_DIR$/src/entity/PointFigure.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/modules.uml">
@@ -676,14 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/menu.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_161/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
@@ -691,96 +612,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Buffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Line.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Ray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Figure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Figure1D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/MultiLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#625#626#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Ellipse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding>
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Capture.PNG">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Circle.java">
+    <entry file="file://$PROJECT_DIR$/src/entity/Foursquare.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Figure2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="20" />
+        <state relative-caret-position="85">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding>
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -791,31 +631,31 @@
           <ID>JAVA</ID>
           <OriginalElement />
           <nodes>
-            <node x="515.0089285714286" y="289.5">entity.Figure1D</node>
-            <node x="106.25" y="212.0">entity.Figure2D</node>
-            <node x="446.0" y="724.5">entity.Section</node>
-            <node x="0.0" y="702.0">entity.SymmetricFigure</node>
-            <node x="152.25" y="0.0">entity.Figure</node>
-            <node x="595.0" y="724.5">entity.Ray</node>
-            <node x="9.0" y="479.0">entity.Polygon</node>
-            <node x="362.00892857142856" y="848.0">entity.MultiLine</node>
-            <node x="268.7321428571429" y="735.5">entity.Circle</node>
-            <node x="554.0" y="446.0">entity.Buffer</node>
-            <node x="744.0" y="724.5">entity.Line</node>
-            <node x="214.0" y="446.0">entity.Ellipse</node>
+            <node x="532.9375" y="289.5">entity.Figure1D</node>
+            <node x="120.0" y="212.0">entity.Figure2D</node>
+            <node x="463.0" y="724.5">entity.Section</node>
+            <node x="4.0" y="702.0">entity.SymmetricFigure</node>
+            <node x="166.0" y="0.0">entity.Figure</node>
+            <node x="612.0" y="724.5">entity.Ray</node>
+            <node x="0.0" y="479.0">entity.Polygon</node>
+            <node x="379.93749999999994" y="848.0">entity.MultiLine</node>
+            <node x="287.58928571428567" y="735.5">entity.Circle</node>
+            <node x="571.0" y="446.0">entity.Buffer</node>
+            <node x="761.0" y="724.5">entity.Line</node>
+            <node x="230.99999999999997" y="446.0">entity.Ellipse</node>
           </nodes>
           <notes />
           <edges>
             <edge source="entity.MultiLine" target="entity.Section">
               <point x="78.33333333333337" y="-81.0" />
-              <point x="557.8422619047619" y="823.0" />
-              <point x="542.75" y="823.0" />
+              <point x="575.7708333333333" y="823.0" />
+              <point x="559.75" y="823.0" />
               <point x="32.25" y="25.5" />
             </edge>
             <edge source="entity.Figure1D" target="entity.Figure">
               <point x="0.0" y="-14.5" />
-              <point x="563.0089285714286" y="187.0" />
-              <point x="328.0833333333333" y="187.0" />
+              <point x="580.9375" y="187.0" />
+              <point x="341.8333333333333" y="187.0" />
               <point x="70.33333333333331" y="81.0" />
             </edge>
             <edge source="entity.Figure2D" target="entity.Figure">
@@ -824,62 +664,62 @@
             </edge>
             <edge source="entity.Circle" target="entity.Ellipse">
               <point x="19.25" y="-14.5" />
-              <point x="326.4821428571429" y="682.0" />
-              <point x="372.25" y="682.0" />
+              <point x="345.33928571428567" y="682.0" />
+              <point x="389.25" y="682.0" />
               <point x="52.75" y="103.0" />
             </edge>
             <edge source="entity.MultiLine" target="entity.Figure1D">
               <point x="-78.33333333333331" y="-81.0" />
-              <point x="401.1755952380952" y="823.0" />
-              <point x="435.5" y="823.0" />
-              <point x="435.5" y="421.0" />
-              <point x="539.0089285714286" y="421.0" />
+              <point x="419.10416666666663" y="823.0" />
+              <point x="452.5" y="823.0" />
+              <point x="452.5" y="421.0" />
+              <point x="556.9375" y="421.0" />
               <point x="-24.0" y="14.5" />
             </edge>
             <edge source="entity.Line" target="entity.Buffer">
               <point x="32.25" y="-25.5" />
-              <point x="840.75" y="672.0" />
-              <point x="747.4166666666666" y="672.0" />
+              <point x="857.75" y="672.0" />
+              <point x="764.4166666666666" y="672.0" />
               <point x="87.91666666666663" y="103.0" />
             </edge>
             <edge source="entity.Polygon" target="entity.Figure2D">
-              <point x="-46.25" y="-70.0" />
-              <point x="55.25" y="421.0" />
-              <point x="131.5" y="421.0" />
+              <point x="-52.75" y="-70.0" />
+              <point x="52.75" y="421.0" />
+              <point x="145.25" y="421.0" />
               <point x="-75.75" y="92.0" />
             </edge>
             <edge source="entity.Buffer" target="entity.Figure1D">
               <point x="0.0" y="-103.0" />
-              <point x="659.5" y="421.0" />
-              <point x="587.0089285714286" y="421.0" />
+              <point x="676.5" y="421.0" />
+              <point x="604.9375" y="421.0" />
               <point x="24.0" y="14.5" />
             </edge>
             <edge source="entity.Ellipse" target="entity.Figure2D">
               <point x="52.75" y="-103.0" />
-              <point x="372.25" y="421.0" />
-              <point x="283.0" y="421.0" />
+              <point x="389.25" y="421.0" />
+              <point x="296.75" y="421.0" />
               <point x="75.75" y="92.0" />
             </edge>
             <edge source="entity.Ray" target="entity.Buffer">
               <point x="32.25" y="-25.5" />
-              <point x="691.75" y="682.0" />
-              <point x="677.0833333333334" y="682.0" />
+              <point x="708.75" y="682.0" />
+              <point x="694.0833333333334" y="682.0" />
               <point x="17.58333333333337" y="103.0" />
             </edge>
             <edge source="entity.SymmetricFigure" target="entity.Polygon">
               <point x="-50.75" y="-48.0" />
-              <point x="50.75" y="682.0" />
-              <point x="55.25" y="682.0" />
-              <point x="-46.25" y="70.0" />
+              <point x="54.75" y="682.0" />
+              <point x="52.75" y="682.0" />
+              <point x="-52.75" y="70.0" />
             </edge>
             <edge source="entity.Section" target="entity.Buffer">
               <point x="-32.25" y="-25.5" />
-              <point x="478.25" y="672.0" />
-              <point x="571.5833333333334" y="672.0" />
+              <point x="495.25" y="672.0" />
+              <point x="588.5833333333334" y="672.0" />
               <point x="-87.91666666666663" y="103.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.9158192090395478" x="118.597867926949" y="557.0604565083282" />
+          <settings layout="Hierarchic Group" zoom="0.9158192090395478" x="118.597867926949" y="494.06045650832823" />
           <SelectedNodes>
             <node>entity.Figure1D</node>
           </SelectedNodes>
@@ -892,10 +732,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Figure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="4" column="32" selection-start-line="4" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Figure1D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/FigureType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/MultiLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/Polygon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+        <state relative-caret-position="85">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#478#479#0" expanded="true" />
@@ -906,41 +777,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/SymmetricFigure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#337#338#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Section.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="66" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="66" />
+        <state relative-caret-position="68">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Foursquare.java">
+    <entry file="file://$PROJECT_DIR$/src/entity/Step.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        <state relative-caret-position="102">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/SymmetricFigure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -949,11 +806,108 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/Triangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        <state relative-caret-position="68">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Buffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Ray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Line.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Section.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Figure2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Ellipse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Circle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1644">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/menu.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
         </state>
       </provider>
     </entry>

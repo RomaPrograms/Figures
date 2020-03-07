@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuController">
    <children>
       <MenuBar>
         <menus>
@@ -17,16 +22,16 @@
                     <items>
                         <MenuItem mnemonicParsing="false" text="Ray" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" onAction="#drawLine" text="Line" />
+                        <MenuItem mnemonicParsing="false" text="Line" />
                         <SeparatorMenuItem mnemonicParsing="false" />
                       <MenuItem mnemonicParsing="false" text="Multi Line" />
                     </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="FIgure 2D">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Ellipse" />
+                        <MenuItem mnemonicParsing="false" onAction="#ellipseItemClicked" text="Ellipse" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Circle" />
+                        <MenuItem mnemonicParsing="false" onAction="#circleItemClicked" text="Circle" />
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem mnemonicParsing="false" text="Polygon" />
                         <SeparatorMenuItem mnemonicParsing="false" />
@@ -38,6 +43,30 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Canvas id="canvasId" height="369.0" width="601.0" />
+      <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" prefHeight="30.0" prefWidth="600.0" text="Welcome to the coolest application for drawing figures!" textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <Separator prefWidth="200.0" />
+      <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0">
+         <children>
+            <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="165.0" text="Choose border color: ">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <ColorPicker fx:id="borderColorPicker" maxWidth="130.0" minHeight="30.0" minWidth="130.0" onDragDone="#borderColorPicked" prefHeight="30.0" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label minHeight="-Infinity" prefHeight="30.0" prefWidth="165.0" text="Choose inner color: ">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <ColorPicker fx:id="innerColorPicker" maxWidth="135.0" minHeight="30.0" minWidth="130.0" onAction="#innerColorPicked" prefHeight="30.0" prefWidth="135.0" />
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <Canvas id="canvasId" fx:id="canvas" height="415.0" width="600.0" />
    </children>
 </VBox>

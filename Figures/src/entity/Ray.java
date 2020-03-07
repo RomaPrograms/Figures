@@ -1,6 +1,8 @@
 package entity;
 
 import java.awt.*;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.paint.Color;
 
 /**
  * @author ������������
@@ -17,6 +19,6 @@ public class Ray extends Buffer {
     }
 
     @Override
-    public void draw() {
+    public void draw(Canvas canvas) {
     }
 }

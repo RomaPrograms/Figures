@@ -2,6 +2,7 @@ package entity;
 
 
 import java.awt.*;
+import javafx.scene.paint.Color;
 
 /**
  * @author ������������

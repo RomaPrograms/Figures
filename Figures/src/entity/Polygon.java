@@ -2,6 +2,8 @@ package entity;
 
 import java.awt.*;
 import java.util.List;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.paint.Color;
 
 /**
  * @author ������������
@@ -29,9 +31,11 @@ public class Polygon extends Figure2D {
         this.points = points;
     }
 
-    public void draw() {
+    @Override
+    public void draw(Canvas canvas) {
     }
 
+    @Override
     public void move(Point newPoint) {
 
     }
