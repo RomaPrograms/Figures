@@ -2,6 +2,7 @@ package entity;
 
 import java.awt.*;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 /**
@@ -19,5 +20,9 @@ public class Section extends Buffer {
 
     @Override
     public void draw(Canvas canvas) {
+        GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
+        graphicsContext.setLineWidth(4);
+        graphicsContext.setStroke(Color.BLACK);
+        graphicsContext.strokeLine(getFirstPoint().getX(), getFirstPoint().getY(), getSecondPoint().getX(), getSecondPoint().getY());
     }
 }
