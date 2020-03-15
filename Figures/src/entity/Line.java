@@ -2,6 +2,7 @@ package entity;
 
 import java.awt.*;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
 /**
@@ -19,6 +20,6 @@ public class Line extends Buffer {
     }
 
     @Override
-    public void draw(Canvas canvas) {
+    public void draw(AnchorPane root) {
     }
 }

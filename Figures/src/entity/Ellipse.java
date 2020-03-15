@@ -1,8 +1,11 @@
 package entity;
 
 import java.awt.*;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
+
+import javafx.event.EventHandler;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
 /**
@@ -14,6 +17,11 @@ public class Ellipse extends Figure2D {
 
     private double widthX;
     private double widthY;
+    private double orgSceneX;
+    private double orgSceneY;
+    private double orgTranslateX;
+    private double orgTranslateY;
+    private javafx.scene.shape.Ellipse javaFxEllipse;
 
     public Ellipse() {
     }
@@ -41,17 +49,55 @@ public class Ellipse extends Figure2D {
         this.widthY = widthY;
     }
 
-    @Override
-    public void draw(Canvas canvas) {
-        GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
-        graphicsContext.setLineWidth(6);
-        graphicsContext.setStroke(this.getBorderColor());
-        graphicsContext.setFill(this.getInnerColor());
-        graphicsContext.fillOval(getCenter().getX(), getCenter().getY(), widthX*2, widthY*2);
+    public javafx.scene.shape.Ellipse getJavaFxEllipse() {
+        return javaFxEllipse;
+    }
+
+    public void setJavaFxEllipse(javafx.scene.shape.Ellipse javaFxEllipse) {
+        this.javaFxEllipse = javaFxEllipse;
     }
 
     @Override
-    public void move(Point newPoint) {
+    public void draw(AnchorPane root) {
+        javaFxEllipse = new javafx.scene.shape.Ellipse();
+        javaFxEllipse.setCenterX(getCenter().getX());
+        javaFxEllipse.setCenterY(getCenter().getY());
+        javaFxEllipse.setRadiusX(widthX);
+        javaFxEllipse.setRadiusY(widthY);
+        javaFxEllipse.setStroke(this.borderColor);
+        javaFxEllipse.setFill(this.getInnerColor());
+        javaFxEllipse.setStrokeWidth(6);
+        root.getChildren().add(javaFxEllipse);
+        move();
+    }
 
+    @Override
+    public void move() {
+        javaFxEllipse.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent t) {
+                if(t.getButton().equals(MouseButton.SECONDARY)) {
+                    orgSceneX = t.getSceneX();
+                    orgSceneY = t.getSceneY();
+                    orgTranslateX = ((javafx.scene.shape.Ellipse) (t.getSource())).getTranslateX();
+                    orgTranslateY = ((javafx.scene.shape.Ellipse) (t.getSource())).getTranslateY();
+                }
+            }
+        });
+
+        javaFxEllipse.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent t) {
+                if(t.getButton().equals(MouseButton.SECONDARY)) {
+                    double offsetX = t.getSceneX() - orgSceneX;
+                    double offsetY = t.getSceneY() - orgSceneY;
+                    double newTranslateX = orgTranslateX + offsetX;
+                    double newTranslateY = orgTranslateY + offsetY;
+
+                    ((javafx.scene.shape.Ellipse) (t.getSource())).setTranslateX(newTranslateX);
+                    ((javafx.scene.shape.Ellipse) (t.getSource())).setTranslateY(newTranslateY);
+                }
+            }
+        });
     }
 }

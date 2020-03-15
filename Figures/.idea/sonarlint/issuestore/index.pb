@@ -33,3 +33,13 @@ S
 #src/line_drawer/LineController.java,7\0\70a0121aec3162ce6957d9cd3ead90d2d208a8e6
 F
 src/entity/Buffer.java,9\4\94feabfc808f286ccd04f4a3db4b21a868515350
+J
+src/entity/FigureType.java,5\3\5388befb3d5e8e20038091b96ec8216ef77dece1
+I
+src/entity/Rectangle.java,e\e\eeb3461145069655a5fe22ed27f7a356f91032e9
+D
+src/entity/Step.java,0\7\07d9d24cbd96ddaa7556eac59b4bb89c89ca19b6
+H
+src/entity/Triangle.java,c\7\c7a3eeadb0a7e51e58c02fcf3252ede7416aa855
+W
+'out/production/Figures/sample/menu.fxml,2\a\2a3d05c6dab7f8f67d5a32f1e702af418df886c6

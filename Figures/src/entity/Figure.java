@@ -2,6 +2,7 @@ package entity;
 
 
 import javafx.scene.canvas.Canvas;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
 import java.awt.*;
@@ -30,10 +31,10 @@ public abstract class Figure {
         this.borderColor = borderColor;
     }
 
-    public abstract void draw(Canvas canvas);
+    public abstract void draw(AnchorPane root);
 
     public abstract Point location();
 
-    public abstract void move(Point newPoint);
+    public abstract void move();
 
 }

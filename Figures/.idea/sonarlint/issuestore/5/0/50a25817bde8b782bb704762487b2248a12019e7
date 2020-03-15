@@ -1,3 +1,22 @@
 
-Jsquid:S1172",Remove this unused method parameter "event".(Š÷‚8“Ë¸‰.
-Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8“Ë¸‰.
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÔÖ€ûÿÿÿÿ8õêÄ¯‹.
+Nsquid:S1199"-Extract this nested code block into a method.(¢ú¦íüÿÿÿÿ8ãå¯‹.
+Hsquid:S1199"-Extract this nested code block into a method.(ùÅå
+8ªÚ‘¯‹.
+Nsquid:S1199"-Extract this nested code block into a method.(¢†ŒÖûÿÿÿÿ8ªÚ‘¯‹.
+‘"squid:SwitchLastCaseIsDefaultCheck"YComplete cases by adding the missing enum constants or add a default case to this switch.(‰‰øúÿÿÿÿ8¦®œÔŒ.
+Nsquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ8ªÚ‘¯‹.
+Ksquid:S00108")Either remove or fill this block of code.(ï øÿÿÿÿ8ªì¨ÕŒ.
+lsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(‰‰øúÿÿÿÿ8¦®œÔŒ.
+Hsquid:S1199"-Extract this nested code block into a method.(ùÅå
+8ªÚ‘¯‹.
+Nsquid:S1199"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ8ªÚ‘¯‹.
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ı¾êç8£¿¼ÓŒ.
+Nsquid:S1199"-Extract this nested code block into a method.(¢†ŒÖûÿÿÿÿ8ªÚ‘¯‹.
+Nsquid:S1199"-Extract this nested code block into a method.(¼ÜÆ–øÿÿÿÿ8ãå¯‹.
+Isquid:S1199"-Extract this nested code block into a method.(§Ù¶¦8ªÚ‘¯‹.
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ŒÃÍ°úÿÿÿÿ8—ÀïÒŒ.
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(•õæšÿÿÿÿÿ8£¿¼ÓŒ.
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ŒÃÍ°úÿÿÿÿ8—ÀïÒŒ.
+fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¥¥Õ%8¯ÜÕÓŒ.

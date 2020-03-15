@@ -3,6 +3,7 @@ package entity;
 import java.awt.*;
 import java.util.List;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
 /**
@@ -32,11 +33,11 @@ public class Polygon extends Figure2D {
     }
 
     @Override
-    public void draw(Canvas canvas) {
+    public void draw(AnchorPane root) {
     }
 
     @Override
-    public void move(Point newPoint) {
+    public void move() {
 
     }
 }

@@ -3,6 +3,7 @@ package entity;
 import java.awt.*;
 import java.util.List;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * @author ������������
@@ -28,7 +29,7 @@ public class MultiLine extends Figure1D {
     }
 
     @Override
-    public void draw(Canvas canvas) {
+    public void draw(AnchorPane root) {
     }
 
     @Override
@@ -37,6 +38,6 @@ public class MultiLine extends Figure1D {
     }
 
     @Override
-    public void move(Point newPoint) {
+    public void move() {
     }
 }
