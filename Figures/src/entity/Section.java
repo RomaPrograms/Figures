@@ -5,11 +5,6 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-/**
- * @author ������������
- * @version 1.0
- * @created 01-Mar-2020 3:05:04 PM
- */
 public class Section extends Buffer {
     public Section() {
     }

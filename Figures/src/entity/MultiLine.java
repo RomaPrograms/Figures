@@ -1,14 +1,12 @@
 package entity;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.List;
-import javafx.scene.canvas.Canvas;
 
-/**
- * @author ������������
- * @version 1.0
- * @created 01-Mar-2020 3:05:04 PM
- */
+import javafx.scene.canvas.Canvas;
+import javafx.scene.paint.Color;
+
 public class MultiLine extends Figure1D {
     private List<Section> sections;
 
@@ -27,8 +25,16 @@ public class MultiLine extends Figure1D {
         this.sections = sections;
     }
 
+    public MultiLine(Point... points) {
+        sections = new ArrayList<>(points.length - 1);
+        for (int i = 0; i < points.length - 1;i++)
+            sections.add(new Section(points[i],points[i + 1], super.getBorderColor()));
+    }
+
     @Override
     public void draw(Canvas canvas) {
+        for (Section section : sections)
+            section.draw(canvas);
     }
 
     @Override
