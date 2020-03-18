@@ -6,7 +6,7 @@ import javafx.scene.paint.Color;
 
 public class Triangle extends Polygon {
     public Triangle(Color borderColor, Point center,
-                    Color innerColor, List<Point> points) {
+                    Color innerColor, List<Double> points) {
         super(borderColor, center, innerColor, points);
         if(points.size() != 3) {
             System.out.println("Incorrect number of points!!!!!!!!");

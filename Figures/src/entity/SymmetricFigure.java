@@ -11,19 +11,19 @@ import javafx.scene.paint.Color;
  */
 public class SymmetricFigure extends Polygon {
 
-	private int numberSides;
+    private int numberSides;
 
-	public SymmetricFigure(Color borderColor, Point center, Color innerColor,
-						   List<Point> points, int numberSides) {
-		super(borderColor, center, innerColor, points);
-		this.numberSides = numberSides;
-	}
+    public SymmetricFigure(Color borderColor, Point center, Color innerColor,
+                           List<Double> points, int numberSides) {
+        super(borderColor, center, innerColor, points);
+        this.numberSides = numberSides;
+    }
 
-	public int getNumberSides() {
-		return numberSides;
-	}
+    public int getNumberSides() {
+        return numberSides;
+    }
 
-	public void setNumberSides(int numberSides) {
-		this.numberSides = numberSides;
-	}
+    public void setNumberSides(int numberSides) {
+        this.numberSides = numberSides;
+    }
 }

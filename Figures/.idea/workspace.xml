@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Added inner color.">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Added polygon.">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/0139d3cbe9e4b2cd4b88b9669e4a0b897696dc73" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/0139d3cbe9e4b2cd4b88b9669e4a0b897696dc73" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/94feabfc808f286ccd04f4a3db4b21a868515350" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/94feabfc808f286ccd04f4a3db4b21a868515350" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bc310eaa75447317af8b7787315befc360315d83" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bc310eaa75447317af8b7787315befc360315d83" afterDir="false" />
@@ -119,7 +119,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="9154" />
-          <entry key="PLAIN_TEXT" value="136" />
+          <entry key="PLAIN_TEXT" value="146" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
@@ -194,7 +194,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/MenuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1754">
+            <state relative-caret-position="-2364">
               <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -530,17 +530,23 @@
       <option name="project" value="LOCAL" />
       <updated>1583601829316</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added polygon.">
+      <created>1584537643973</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584537643973</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79807000" />
+    <option name="totallyTimeSpent" value="80072000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21073826" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21073826" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -566,7 +572,7 @@
       <window_info anchor="bottom" id="SonarLint" order="15" />
       <window_info anchor="bottom" id="JProfiler" order="16" />
       <window_info anchor="bottom" id="Database Changes" order="17" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="18" weight="0.20567375" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="18" visible="true" weight="0.24539007" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -656,7 +662,8 @@
     <MESSAGE value="Corrected structure of entity classes." />
     <MESSAGE value="Added ellipse and circle controllers." />
     <MESSAGE value="Added inner color." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added inner color." />
+    <MESSAGE value="Added polygon." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added polygon." />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -908,6 +915,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1007,7 +1017,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1754">
+        <state relative-caret-position="-2364">
           <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
