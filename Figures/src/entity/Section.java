@@ -1,16 +1,20 @@
 package entity;
 
 import java.awt.*;
-import javafx.scene.canvas.Canvas;
+
+import javafx.scene.input.MouseButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
 
-/**
- * @author ������������
- * @version 1.0
- * @created 01-Mar-2020 3:05:04 PM
- */
 public class Section extends Buffer {
+
+    private javafx.scene.shape.Line javaFxLine;
+    private double orgSceneX;
+    private double orgSceneY;
+    private double orgTranslateX;
+    private double orgTranslateY;
+
     public Section() {
     }
 
@@ -18,7 +22,54 @@ public class Section extends Buffer {
         super(firstPoint, secondPoint, borderColor);
     }
 
+
+    public Line getJavaFxLine() {
+        return javaFxLine;
+    }
+
+    public void setJavaFxLine(Line javaFxLine) {
+        this.javaFxLine = javaFxLine;
+    }
+
     @Override
     public void draw(AnchorPane root) {
+        javaFxLine = new javafx.scene.shape.Line();
+        javaFxLine.setStartX(getFirstPoint().getX());
+        javaFxLine.setStartY(getFirstPoint().getY());
+        javaFxLine.setEndX(getSecondPoint().getX());
+        javaFxLine.setEndY(getSecondPoint().getY());
+        javaFxLine.setStroke(this.borderColor);
+        javaFxLine.setStrokeWidth(10);
+        root.getChildren().add(javaFxLine);
+        move();
+    }
+
+    @Override
+    public void move() {
+        javaFxLine.setOnMousePressed(t -> {
+            if(t.getButton().equals(MouseButton.SECONDARY)) {
+                orgSceneX = t.getSceneX();
+                orgSceneY = t.getSceneY();
+                orgTranslateX = ((javafx.scene.shape.Line) (t.getSource())).getTranslateX();
+                orgTranslateY = ((javafx.scene.shape.Line) (t.getSource())).getTranslateY();
+            }
+        });
+
+        javaFxLine.setOnMouseDragged(t -> {
+            if(t.getButton().equals(MouseButton.SECONDARY)) {
+                double offsetX = t.getSceneX() - orgSceneX;
+                double offsetY = t.getSceneY() - orgSceneY;
+                double newTranslateX = orgTranslateX + offsetX;
+                double newTranslateY = orgTranslateY + offsetY;
+
+                ((javafx.scene.shape.Line) (t.getSource())).setTranslateX(newTranslateX);
+                ((javafx.scene.shape.Line) (t.getSource())).setTranslateY(newTranslateY);
+            }
+        });
+    }
+
+    @Override
+    public Point location() {
+        return getFirstPoint();
     }
 }

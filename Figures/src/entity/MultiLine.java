@@ -1,43 +1,98 @@
 package entity;
 
 import java.awt.*;
-import java.util.List;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.layout.AnchorPane;
 
-/**
- * @author ������������
- * @version 1.0
- * @created 01-Mar-2020 3:05:04 PM
- */
+import javafx.scene.input.MouseButton;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+
 public class MultiLine extends Figure1D {
-    private List<Section> sections;
+    private Point[] points;
+    private javafx.scene.shape.Polyline javaFxPolyLine;
+    private double orgSceneX;
+    private double orgSceneY;
+    private double orgTranslateX;
+    private double orgTranslateY;
 
     public MultiLine() {
     }
 
-    public MultiLine(List<Section> sections) {
-        this.sections = sections;
+//    public MultiLine(List<Section> sections) {
+//        this.sections = sections;
+//    }
+//
+//    public List<Section> getSections() {
+//        return sections;
+//    }
+//
+//    public void setSections(List<Section> sections) {
+//        this.sections = sections;
+//    }
+//
+//    public MultiLine(Point[] points, Color borderColor) {
+//        sections = new ArrayList<>(points.length - 1);
+//        for (int i = 0; i < points.length - 1; i++)
+//            sections.add(new Section(points[i], points[i + 1], borderColor));
+//    }
+
+    public Point[] getPoints() {
+        return points;
     }
 
-    public List<Section> getSections() {
-        return sections;
+    public void setPoints(Point[] points) {
+        this.points = points;
     }
 
-    public void setSections(List<Section> sections) {
-        this.sections = sections;
+    public MultiLine(Point[] points, Color borderColor) {
+        this.points = points;
+        this.borderColor = borderColor;
     }
 
     @Override
     public void draw(AnchorPane root) {
+        double[] arrDoubles = new double[points.length * 2];
+        for (int i = 0; i < points.length; ++i) {
+            arrDoubles[2 * i] = points[i].getX();
+            arrDoubles[2 * i + 1] = points[i].getY();
+        }
+        javaFxPolyLine = new javafx.scene.shape.Polyline(arrDoubles);
+
+//        javaFxPolyLine.setStartX(getFirstPoint().getX());
+//        javaFxLine.setStartY(getFirstPoint().getY());
+//        javaFxLine.setEndX(getSecondPoint().getX());
+//        javaFxLine.setEndY(getSecondPoint().getY());
+        javaFxPolyLine.setStroke(this.borderColor);
+        javaFxPolyLine.setStrokeWidth(10);
+        root.getChildren().add(javaFxPolyLine);
+        move();
     }
 
     @Override
     public Point location() {
-        return null;
+        return points[0];
     }
 
     @Override
     public void move() {
+        javaFxPolyLine.setOnMousePressed(t -> {
+            if (t.getButton().equals(MouseButton.SECONDARY)) {
+                orgSceneX = t.getSceneX();
+                orgSceneY = t.getSceneY();
+                orgTranslateX = ((javafx.scene.shape.Polyline) (t.getSource())).getTranslateX();
+                orgTranslateY = ((javafx.scene.shape.Polyline) (t.getSource())).getTranslateY();
+            }
+        });
+
+        javaFxPolyLine.setOnMouseDragged(t -> {
+            if (t.getButton().equals(MouseButton.SECONDARY)) {
+                double offsetX = t.getSceneX() - orgSceneX;
+                double offsetY = t.getSceneY() - orgSceneY;
+                double newTranslateX = orgTranslateX + offsetX;
+                double newTranslateY = orgTranslateY + offsetY;
+
+                ((javafx.scene.shape.Polyline) (t.getSource())).setTranslateX(newTranslateX);
+                ((javafx.scene.shape.Polyline) (t.getSource())).setTranslateY(newTranslateY);
+            }
+        });
     }
 }

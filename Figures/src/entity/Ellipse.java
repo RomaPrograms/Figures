@@ -73,30 +73,24 @@ public class Ellipse extends Figure2D {
 
     @Override
     public void move() {
-        javaFxEllipse.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent t) {
-                if(t.getButton().equals(MouseButton.SECONDARY)) {
-                    orgSceneX = t.getSceneX();
-                    orgSceneY = t.getSceneY();
-                    orgTranslateX = ((javafx.scene.shape.Ellipse) (t.getSource())).getTranslateX();
-                    orgTranslateY = ((javafx.scene.shape.Ellipse) (t.getSource())).getTranslateY();
-                }
+        javaFxEllipse.setOnMousePressed(t -> {
+            if(t.getButton().equals(MouseButton.SECONDARY)) {
+                orgSceneX = t.getSceneX();
+                orgSceneY = t.getSceneY();
+                orgTranslateX = ((javafx.scene.shape.Ellipse) (t.getSource())).getTranslateX();
+                orgTranslateY = ((javafx.scene.shape.Ellipse) (t.getSource())).getTranslateY();
             }
         });
 
-        javaFxEllipse.setOnMouseDragged(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent t) {
-                if(t.getButton().equals(MouseButton.SECONDARY)) {
-                    double offsetX = t.getSceneX() - orgSceneX;
-                    double offsetY = t.getSceneY() - orgSceneY;
-                    double newTranslateX = orgTranslateX + offsetX;
-                    double newTranslateY = orgTranslateY + offsetY;
+        javaFxEllipse.setOnMouseDragged(t -> {
+            if(t.getButton().equals(MouseButton.SECONDARY)) {
+                double offsetX = t.getSceneX() - orgSceneX;
+                double offsetY = t.getSceneY() - orgSceneY;
+                double newTranslateX = orgTranslateX + offsetX;
+                double newTranslateY = orgTranslateY + offsetY;
 
-                    ((javafx.scene.shape.Ellipse) (t.getSource())).setTranslateX(newTranslateX);
-                    ((javafx.scene.shape.Ellipse) (t.getSource())).setTranslateY(newTranslateY);
-                }
+                ((javafx.scene.shape.Ellipse) (t.getSource())).setTranslateX(newTranslateX);
+                ((javafx.scene.shape.Ellipse) (t.getSource())).setTranslateY(newTranslateY);
             }
         });
     }

@@ -1,7 +1,6 @@
 package sample;
 
 import entity.*;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
@@ -15,12 +14,15 @@ import javafx.scene.paint.Color;
 import java.awt.*;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 import java.util.List;
 
 public class MenuController implements Initializable {
     private static final String CHOOSE_CENTER_TEXT
             = "Choose startingPoint: ";
+    private static final String CHOOSE_SECOND_POINT
+            = "Choose second point: ";
     private static final String CHOOSE_WIDTH_BY_X_DISTANCE_TEXT
             = "Choose width by X distance: ";
     private static final String CHOOSE_WIDTH_BY_Y_DISTANCE_TEXT
@@ -44,6 +46,7 @@ public class MenuController implements Initializable {
     @FXML
     AnchorPane anchorPane;
     private FigureType figureType;
+    private List<Point> points = new ArrayList<>();
     private Figure figure;
     private Step step;
     private Point center;
@@ -66,6 +69,18 @@ public class MenuController implements Initializable {
                         case CIRCLE:
                             selectCircleParameters(e);
                             break;
+                        case RAY:
+                            selectRayParameters(e);
+                            break;
+                        case LINE:
+                            selectLineParameters(e);
+                            break;
+                        case SECTION:
+                            selectSectionParameters(e);
+                            break;
+                        case MULTILINE:
+                            selectMultilineParameters(e);
+                            break;
                         default:
                     }
                 } else {
@@ -74,6 +89,7 @@ public class MenuController implements Initializable {
             }
         });
     }
+
 
     public void ellipseItemClicked() {
         figureType = FigureType.ELLIPSE;
@@ -88,13 +104,19 @@ public class MenuController implements Initializable {
     }
 
     public void rayItemClicked() {
-        figureType = FigureType.LINE;
+        figureType = FigureType.RAY;
+        step = Step.FIRST_STEP;
+        label.setText(CHOOSE_FIRST_POINT);
+    }
+
+    public void sectionItemClicked() {
+        figureType = FigureType.SECTION;
         step = Step.FIRST_STEP;
         label.setText(CHOOSE_FIRST_POINT);
     }
 
     public void multilineItemClicked() {
-        figureType = FigureType.LINE;
+        figureType = FigureType.MULTILINE;
         step = Step.FIRST_STEP;
         label.setText(CHOOSE_FIRST_POINT);
     }
@@ -155,6 +177,101 @@ public class MenuController implements Initializable {
                 figure.draw(anchorPane);
                 label.setText(CONGRATULATION_WITH_DREW_FIGURE);
                 break;
+            default:
+                label.setText(DEFAULT_TEXT);
+        }
+    }
+
+    private void selectRayParameters(final MouseEvent e) {
+        switch (step) {
+            case FIRST_STEP: {
+                center.setLocation(e.getX(), e.getY());
+                label.setText(CHOOSE_SECOND_POINT);
+                step = Step.SECOND_STEP;
+                break;
+            }
+            case SECOND_STEP: {
+                Point secondPoint = new Point();
+                secondPoint.setLocation(e.getX(), e.getY());
+                figure = new Ray(center, secondPoint, borderColorPicker.getValue());
+                figure.draw(anchorPane);
+                step = Step.FIGURE_DREW;
+                label.setText(CONGRATULATION_WITH_DREW_FIGURE);
+                break;
+            }
+            default:
+                label.setText(DEFAULT_TEXT);
+        }
+    }
+
+    private void selectLineParameters(final MouseEvent e) {
+        switch (step) {
+            case FIRST_STEP: {
+                center.setLocation(e.getX(), e.getY());
+                label.setText(CHOOSE_SECOND_POINT);
+                step = Step.SECOND_STEP;
+                break;
+            }
+            case SECOND_STEP: {
+                Point secondPoint = new Point();
+                secondPoint.setLocation(e.getX(), e.getY());
+                figure = new Line(center, secondPoint, borderColorPicker.getValue());
+                figure.draw(anchorPane);
+                step = Step.FIGURE_DREW;
+                label.setText(CONGRATULATION_WITH_DREW_FIGURE);
+                break;
+            }
+            default:
+                label.setText(DEFAULT_TEXT);
+        }
+    }
+
+    private void selectSectionParameters(final MouseEvent e) {
+        switch (step) {
+            case FIRST_STEP: {
+                center.setLocation(e.getX(), e.getY());
+                label.setText(CHOOSE_SECOND_POINT);
+                step = Step.SECOND_STEP;
+                break;
+            }
+            case SECOND_STEP: {
+                Point secondPoint = new Point();
+                secondPoint.setLocation(e.getX(), e.getY());
+                figure = new Section(center, secondPoint, borderColorPicker.getValue());
+                figure.draw(anchorPane);
+                step = Step.FIGURE_DREW;
+                label.setText(CONGRATULATION_WITH_DREW_FIGURE);
+                break;
+            }
+            default:
+                label.setText(DEFAULT_TEXT);
+        }
+    }
+
+    private void selectMultilineParameters(final MouseEvent e) {
+        switch (step) {
+            case FIRST_STEP: {
+                center.setLocation(e.getX(), e.getY());
+                points.add(center);
+                label.setText(CHOOSE_SECOND_POINT);
+                step = Step.SECOND_STEP;
+                break;
+            }
+            case SECOND_STEP: {
+                Point secondPoint = new Point();
+                secondPoint.setLocation(e.getX(), e.getY());
+                if (points.get(points.size()-1).equals(secondPoint)) {
+                    figure = new MultiLine(points.toArray(new Point[points.size()]), borderColorPicker.getValue());
+                    figure.draw(anchorPane);
+                    step = Step.FIGURE_DREW;
+                    label.setText(CONGRATULATION_WITH_DREW_FIGURE);
+                    points.clear();
+                } else {
+                    points.add(secondPoint);
+                    step = Step.SECOND_STEP;
+                }
+                break;
+            }
             default:
                 label.setText(DEFAULT_TEXT);
         }
