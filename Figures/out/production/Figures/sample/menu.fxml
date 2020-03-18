@@ -15,74 +15,76 @@
 <?import javafx.scene.text.Font?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuController">
-   <children>
-      <MenuBar>
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-                  <Menu mnemonicParsing="false" text="Figure 1D">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#rayItemClicked" text="Ray" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" onAction="#lineItemClicked" text="Line" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                      <MenuItem mnemonicParsing="false" onAction="#multilineItemClicked" text="Multi Line" />
+                        <Menu mnemonicParsing="false" text="Figure 1D">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#rayItemClicked" text="Ray" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" onAction="#lineItemClicked" text="Line" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" onAction="#multilineItemClicked" text="Multi Line" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" onAction="#sectionItemClicked" text="Section" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="FIgure 2D">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#ellipseItemClicked" text="Ellipse" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" onAction="#circleItemClicked" text="Circle" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" onAction="#polygonItemClicked" text="Polygon" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem id="menuItem" mnemonicParsing="false" onAction="#symmetricFigureItemClicked" text="SymmetricFigure" />
+                            </items>
+                        </Menu>
+                        <MenuItem id="menuItemDeleteId" mnemonicParsing="false" text="Clear" />
                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="FIgure 2D">
-                    <items>
-                        <MenuItem mnemonicParsing="false" onAction="#ellipseItemClicked" text="Ellipse" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" onAction="#circleItemClicked" text="Circle" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Polygon" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                      <MenuItem id="menuItem" mnemonicParsing="false" text="SymmetricFigure" />
-                    </items>
-                  </Menu>
-                  <MenuItem id="menuItemDeleteId" mnemonicParsing="false" text="Clear" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-      <HBox prefHeight="35.0" prefWidth="900.0">
-         <children>
-            <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" prefHeight="35.0" prefWidth="656.0" text="Welcome to the coolest application for drawing figures!" textAlignment="CENTER">
-               <font>
-                  <Font name="System Italic" size="18.0" />
-               </font>
-            </Label>
-            <Separator orientation="VERTICAL" prefHeight="200.0" />
-            <CheckBox fx:id="checkbox" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="320.0" text="Move figure" textAlignment="CENTER">
-               <font>
-                  <Font name="System Italic" size="18.0" />
-               </font>
-            </CheckBox>
-         </children>
-      </HBox>
-      <Separator prefWidth="200.0" />
-      <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
-         <children>
-            <Label minHeight="-Infinity" prefHeight="35.0" prefWidth="240.0" text="Choose border color: ">
-               <font>
-                  <Font name="System Italic" size="18.0" />
-               </font>
-            </Label>
-            <ColorPicker fx:id="borderColorPicker" maxWidth="172.0" minHeight="30.0" minWidth="130.0" prefHeight="35.0" prefWidth="172.0" />
-            <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" />
-            <Label minHeight="-Infinity" prefHeight="35.0" prefWidth="164.0" text="Choose inner color: ">
-               <font>
-                  <Font name="System Italic" size="18.0" />
-               </font>
-            </Label>
-            <ColorPicker fx:id="innerColorPicker" maxWidth="435.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="317.0" />
-         </children>
-      </HBox>
-      <Separator prefWidth="200.0" />
-      <ScrollPane prefHeight="594.0" prefWidth="900.0">
-        <content>
-          <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="577.0" prefWidth="900.0" />
-        </content>
-      </ScrollPane>
-   </children>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <HBox prefHeight="35.0" prefWidth="900.0">
+            <children>
+                <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" prefHeight="35.0" prefWidth="656.0" text="Welcome to the coolest application for drawing figures!" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Italic" size="18.0" />
+                    </font>
+                </Label>
+                <Separator orientation="VERTICAL" prefHeight="200.0" />
+                <CheckBox fx:id="checkbox" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="320.0" text="Move figure" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Italic" size="18.0" />
+                    </font>
+                </CheckBox>
+            </children>
+        </HBox>
+        <Separator prefWidth="200.0" />
+        <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0">
+            <children>
+                <Label minHeight="-Infinity" prefHeight="35.0" prefWidth="240.0" text="Choose border color: ">
+                    <font>
+                        <Font name="System Italic" size="18.0" />
+                    </font>
+                </Label>
+                <ColorPicker fx:id="borderColorPicker" maxWidth="172.0" minHeight="30.0" minWidth="130.0" prefHeight="35.0" prefWidth="172.0" />
+                <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" />
+                <Label minHeight="-Infinity" prefHeight="35.0" prefWidth="164.0" text="Choose inner color: ">
+                    <font>
+                        <Font name="System Italic" size="18.0" />
+                    </font>
+                </Label>
+                <ColorPicker fx:id="innerColorPicker" maxWidth="435.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="317.0" />
+            </children>
+        </HBox>
+        <Separator prefWidth="200.0" />
+        <ScrollPane prefHeight="594.0" prefWidth="900.0">
+            <content>
+                <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="577.0" prefWidth="900.0" />
+            </content>
+        </ScrollPane>
+    </children>
 </VBox>

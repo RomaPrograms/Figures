@@ -2,6 +2,7 @@ package sample;
 
 import entity.*;
 import entity.Polygon;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
@@ -38,6 +39,8 @@ public class MenuController implements Initializable {
             = "Choose first point: ";
     private static final String CHOOSE_ANOTHER_POINT
             = "Choose one more point: ";
+    private static final String CHOOSE_DISTANCE
+            = "Choose distance: ";
     @FXML
     public ColorPicker borderColorPicker;
     @FXML
@@ -87,6 +90,9 @@ public class MenuController implements Initializable {
                         case MULTILINE:
                             selectMultilineParameters(e);
                             break;
+                        case SYMMETRIC_FIGURE:
+                            selectSymmetricFigureParameters(e);
+                            break;
                         default:
                     }
                 } else {
@@ -113,6 +119,12 @@ public class MenuController implements Initializable {
         figureType = FigureType.POLYGON;
         step = Step.FIRST_STEP;
         label.setText(CHOOSE_FIRST_POINT);
+    }
+
+    public void symmetricFigureItemClicked() {
+        figureType = FigureType.SYMMETRIC_FIGURE;
+        step = Step.FIRST_STEP;
+        label.setText(CHOOSE_CENTER_TEXT);
     }
 
     public void rayItemClicked() {
@@ -210,6 +222,37 @@ public class MenuController implements Initializable {
                 figure.setBorderColor(borderColorPicker.getValue());
                 anchorPane.getChildren().remove(((Polygon) figure).getJavafxPolygon());
                 figure.draw(anchorPane);
+                break;
+        }
+    }
+
+    private void selectSymmetricFigureParameters(final MouseEvent e) {
+        switch (step) {
+            case FIRST_STEP:
+                center.setLocation(e.getX(), e.getY());
+                label.setText(CHOOSE_DISTANCE);
+                figure = new SymmetricFigure(borderColorPicker.getValue(), center,
+                        innerColorPicker.getValue(), 0);
+                step = Step.SECOND_STEP;
+                break;
+            case SECOND_STEP:
+                double distanceX = e.getX() - center.getX();
+                double distanceY = e.getY() - center.getY();
+                double distance = Math.sqrt(Math.pow(distanceX, 2) + Math.pow(distanceY, 2));
+                ((SymmetricFigure) figure).setDistance(distance);
+                ((SymmetricFigure) figure).setNumberSides((((SymmetricFigure) figure).getNumberSides()) + 1);
+                label.setText("Click one more time if you want to add a point!");
+                step = Step.THIRD_STEP;
+                break;
+            case THIRD_STEP:
+                ((SymmetricFigure) figure).setNumberSides((((SymmetricFigure) figure).getNumberSides()) + 1);
+                if(((SymmetricFigure) figure).getNumberSides() > 2) {
+                    anchorPane.getChildren().remove(((SymmetricFigure) figure).getJavafxPolygon());
+                    if(((SymmetricFigure) figure).getJavafxPolygon() != null) {
+                        ((SymmetricFigure) figure).getJavafxPolygon().getPoints().clear();
+                    }
+                    figure.draw(anchorPane);
+                }
                 break;
         }
     }

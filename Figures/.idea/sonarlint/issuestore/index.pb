@@ -23,14 +23,10 @@ D
 src/entity/Line.java,a\4\a4946e30074ce9f1cbd41b4432c3aa0a28c0b8e7
 D
 src/sample/menu.fxml,b\d\bd610e36256f7388f032d22ce6aa36e6b6cb4d49
-I
-src/line_drawer/line.fxml,5\b\5b843c5b8506952d6085381ddde720b18062b22a
 N
 src/sample/MenuController.java,5\0\50a25817bde8b782bb704762487b2248a12019e7
 D
 src/sample/Main.java,a\d\ad8e8bd4ff8f02a914e3d9ca1bcc32dfc8c503a9
-S
-#src/line_drawer/LineController.java,7\0\70a0121aec3162ce6957d9cd3ead90d2d208a8e6
 F
 src/entity/Buffer.java,9\4\94feabfc808f286ccd04f4a3db4b21a868515350
 J

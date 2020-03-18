@@ -39,7 +39,7 @@
                                 <SeparatorMenuItem mnemonicParsing="false" />
                                 <MenuItem mnemonicParsing="false" onAction="#polygonItemClicked" text="Polygon" />
                                 <SeparatorMenuItem mnemonicParsing="false" />
-                                <MenuItem id="menuItem" mnemonicParsing="false" text="SymmetricFigure" />
+                                <MenuItem id="menuItem" mnemonicParsing="false" onAction="#symmetricFigureItemClicked" text="SymmetricFigure" />
                             </items>
                         </Menu>
                         <MenuItem id="menuItemDeleteId" mnemonicParsing="false" text="Clear" />

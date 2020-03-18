@@ -2,7 +2,12 @@ package entity;
 
 import java.awt.*;
 import java.util.List;
+
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+
+import static java.lang.Math.cos;
+import static java.lang.StrictMath.sin;
 
 /**
  * @author ������������
@@ -12,10 +17,10 @@ import javafx.scene.paint.Color;
 public class SymmetricFigure extends Polygon {
 
     private int numberSides;
+    private double distance;
 
-    public SymmetricFigure(Color borderColor, Point center, Color innerColor,
-                           List<Double> points, int numberSides) {
-        super(borderColor, center, innerColor, points);
+    public SymmetricFigure(Color borderColor, Point center, Color innerColor, int numberSides) {
+        super(borderColor, center, innerColor);
         this.numberSides = numberSides;
     }
 
@@ -25,5 +30,25 @@ public class SymmetricFigure extends Polygon {
 
     public void setNumberSides(int numberSides) {
         this.numberSides = numberSides;
+    }
+
+    public double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
+    @Override
+    public void draw(AnchorPane root) {
+        double angle;
+        for (int i = 1; i <= numberSides; i++) {
+            angle = 2 * Math.PI * i / numberSides;
+            getPoints().add(distance * cos(angle) + getCenter().getX());
+            getPoints().add(distance * sin(angle) + getCenter().getY());
+        }
+
+        super.draw(root);
     }
 }

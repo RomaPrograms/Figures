@@ -30,9 +30,9 @@ public class Polygon extends Figure2D {
     }
 
     public Polygon(Color borderColor, Point center,
-                   Color innerColor, List<Double> points) {
+                   Color innerColor) {
         super(borderColor, center, innerColor);
-        this.points = points;
+        points = new ArrayList<>();
     }
 
     public List<Double> getPoints() {
