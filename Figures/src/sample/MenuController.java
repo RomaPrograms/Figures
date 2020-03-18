@@ -1,6 +1,7 @@
 package sample;
 
 import entity.*;
+import entity.Polygon;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
@@ -35,6 +36,8 @@ public class MenuController implements Initializable {
             = "Congratulation! You drew cool figure!";
     private static final String CHOOSE_FIRST_POINT
             = "Choose first point: ";
+    private static final String CHOOSE_ANOTHER_POINT
+            = "Choose one more point: ";
     @FXML
     public ColorPicker borderColorPicker;
     @FXML
@@ -69,6 +72,9 @@ public class MenuController implements Initializable {
                         case CIRCLE:
                             selectCircleParameters(e);
                             break;
+                        case POLYGON:
+                            selectPolygonParameters(e);
+                            break;
                         case RAY:
                             selectRayParameters(e);
                             break;
@@ -101,6 +107,12 @@ public class MenuController implements Initializable {
         figureType = FigureType.CIRCLE;
         step = Step.FIRST_STEP;
         label.setText(CHOOSE_CENTER_TEXT);
+    }
+
+    public void polygonItemClicked() {
+        figureType = FigureType.POLYGON;
+        step = Step.FIRST_STEP;
+        label.setText(CHOOSE_FIRST_POINT);
     }
 
     public void rayItemClicked() {
@@ -179,6 +191,26 @@ public class MenuController implements Initializable {
                 break;
             default:
                 label.setText(DEFAULT_TEXT);
+        }
+    }
+
+    private void selectPolygonParameters(final MouseEvent e) {
+        switch (step) {
+            case FIRST_STEP:
+                figure = new Polygon();
+                ((Polygon) figure).getPoints().add(e.getX());
+                ((Polygon) figure).getPoints().add(e.getY());
+                label.setText(CHOOSE_ANOTHER_POINT);
+                step = Step.SECOND_STEP;
+                break;
+            case SECOND_STEP:
+                ((Polygon) figure).getPoints().add(e.getX());
+                ((Polygon) figure).getPoints().add(e.getY());
+                ((Polygon) figure).setInnerColor(innerColorPicker.getValue());
+                figure.setBorderColor(borderColorPicker.getValue());
+                anchorPane.getChildren().remove(((Polygon) figure).getJavafxPolygon());
+                figure.draw(anchorPane);
+                break;
         }
     }
 
