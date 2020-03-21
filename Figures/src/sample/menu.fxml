@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -53,17 +52,11 @@
         </MenuBar>
         <HBox prefHeight="35.0" prefWidth="900.0">
             <children>
-                <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" prefHeight="35.0" prefWidth="656.0" text="Welcome to the coolest application for drawing figures!" textAlignment="CENTER">
+                <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" prefHeight="35.0" prefWidth="910.0" text="Welcome to the coolest application for drawing figures!" textAlignment="CENTER">
                     <font>
                         <Font name="System Italic" size="18.0" />
                     </font>
                 </Label>
-                <Separator orientation="VERTICAL" prefHeight="200.0" />
-                <CheckBox fx:id="checkbox" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="320.0" text="Move figure" textAlignment="CENTER">
-                    <font>
-                        <Font name="System Italic" size="18.0" />
-                    </font>
-                </CheckBox>
             </children>
         </HBox>
         <Separator prefWidth="200.0" />
@@ -76,12 +69,12 @@
                 </Label>
                 <ColorPicker fx:id="borderColorPicker" maxWidth="172.0" minHeight="30.0" minWidth="130.0" prefHeight="35.0" prefWidth="172.0" />
                 <Separator orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" />
-                <Label minHeight="-Infinity" prefHeight="35.0" prefWidth="164.0" text="Choose inner color: ">
+                <Label minHeight="-Infinity" prefHeight="35.0" prefWidth="212.0" text="Choose inner color: ">
                     <font>
                         <Font name="System Italic" size="18.0" />
                     </font>
                 </Label>
-                <ColorPicker fx:id="innerColorPicker" maxWidth="435.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="317.0" />
+                <ColorPicker fx:id="innerColorPicker" maxWidth="435.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="270.0" />
             </children>
         </HBox>
         <Separator prefWidth="200.0" />
