@@ -1,12 +1,11 @@
 package entity;
 
-import java.awt.*;
-import java.util.List;
 import javafx.scene.paint.Color;
+import java.util.List;
 
 public class Triangle extends Polygon {
-    public Triangle(Color borderColor, Point center,
+    public Triangle(Color borderColor, List<Double> points,
                     Color innerColor) {
-        super(borderColor, center, innerColor);
+        super(borderColor, points, innerColor);
     }
 }

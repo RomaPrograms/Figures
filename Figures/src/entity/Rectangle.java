@@ -1,12 +1,11 @@
 package entity;
 
-import java.awt.*;
 import java.util.List;
 import javafx.scene.paint.Color;
 
 public class Rectangle extends Polygon {
-    public Rectangle(Color borderColor, Point center,
+    public Rectangle(Color borderColor, List<Double> points,
                      Color innerColor) {
-        super(borderColor, center, innerColor);
+        super(borderColor, points, innerColor);
     }
 }

@@ -4,10 +4,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import javafx.event.EventHandler;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.input.MouseButton;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
@@ -33,6 +30,13 @@ public class Polygon extends Figure2D {
                    Color innerColor) {
         super(borderColor, center, innerColor);
         points = new ArrayList<>();
+    }
+
+    public Polygon(Color borderColor, List<Double> points,
+                   Color innerColor) {
+        setBorderColor(borderColor);
+        setInnerColor(innerColor);
+        this.points = points;
     }
 
     public List<Double> getPoints() {
@@ -67,30 +71,24 @@ public class Polygon extends Figure2D {
 
     @Override
     public void move() {
-        javafxPolygon.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent t) {
-                if(t.getButton().equals(MouseButton.SECONDARY)) {
-                    orgSceneX = t.getSceneX();
-                    orgSceneY = t.getSceneY();
-                    orgTranslateX = ((javafx.scene.shape.Polygon) (t.getSource())).getTranslateX();
-                    orgTranslateY = ((javafx.scene.shape.Polygon) (t.getSource())).getTranslateY();
-                }
+        javafxPolygon.setOnMousePressed(t -> {
+            if(t.getButton().equals(MouseButton.SECONDARY)) {
+                orgSceneX = t.getSceneX();
+                orgSceneY = t.getSceneY();
+                orgTranslateX = ((javafx.scene.shape.Polygon) (t.getSource())).getTranslateX();
+                orgTranslateY = ((javafx.scene.shape.Polygon) (t.getSource())).getTranslateY();
             }
         });
 
-        javafxPolygon.setOnMouseDragged(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent t) {
-                if(t.getButton().equals(MouseButton.SECONDARY)) {
-                    double offsetX = t.getSceneX() - orgSceneX;
-                    double offsetY = t.getSceneY() - orgSceneY;
-                    double newTranslateX = orgTranslateX + offsetX;
-                    double newTranslateY = orgTranslateY + offsetY;
+        javafxPolygon.setOnMouseDragged(t -> {
+            if(t.getButton().equals(MouseButton.SECONDARY)) {
+                double offsetX = t.getSceneX() - orgSceneX;
+                double offsetY = t.getSceneY() - orgSceneY;
+                double newTranslateX = orgTranslateX + offsetX;
+                double newTranslateY = orgTranslateY + offsetY;
 
-                    ((javafx.scene.shape.Polygon) (t.getSource())).setTranslateX(newTranslateX);
-                    ((javafx.scene.shape.Polygon) (t.getSource())).setTranslateY(newTranslateY);
-                }
+                ((javafx.scene.shape.Polygon) (t.getSource())).setTranslateX(newTranslateX);
+                ((javafx.scene.shape.Polygon) (t.getSource())).setTranslateY(newTranslateY);
             }
         });
     }

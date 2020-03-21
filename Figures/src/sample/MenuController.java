@@ -2,7 +2,7 @@ package sample;
 
 import entity.*;
 import entity.Polygon;
-import javafx.event.ActionEvent;
+import entity.Rectangle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
@@ -16,7 +16,6 @@ import javafx.scene.paint.Color;
 import java.awt.*;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 import java.util.List;
 
@@ -41,6 +40,12 @@ public class MenuController implements Initializable {
             = "Choose one more point: ";
     private static final String CHOOSE_DISTANCE
             = "Choose distance: ";
+    private static final String CHOOSE_LOWER_LEFT_CORNER_POINT
+            = "Choose lower left corner: ";
+    private static final String CHOOSE_UPPER_RIGHT_CORNER_POINT
+            = "Choose upper right corner: ";
+    private static final String CHOOSE_THIRD_POINT
+            = "Choose third point: ";
     @FXML
     public ColorPicker borderColorPicker;
     @FXML
@@ -52,17 +57,16 @@ public class MenuController implements Initializable {
     @FXML
     AnchorPane anchorPane;
     private FigureType figureType;
-    private List<Point> points = new ArrayList<>();
+    private List<Point> points;
+    private List<Double> pointsCoordinates;
     private Figure figure;
     private Step step;
     private Point center;
-    private List<Figure> figures;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         step = Step.FIRST_STEP;
         center = new Point();
-        figures = new ArrayList<>();
         borderColorPicker.setValue(Color.BLACK);
         innerColorPicker.setValue(Color.BLACK);
         anchorPane.setOnMouseClicked(e -> {
@@ -92,6 +96,12 @@ public class MenuController implements Initializable {
                             break;
                         case SYMMETRIC_FIGURE:
                             selectSymmetricFigureParameters(e);
+                            break;
+                        case TRIANGLE:
+                            selectTriangleFigureParameters(e);
+                            break;
+                        case RECTANGLE:
+                            selectRectangleFigureParameters(e);
                             break;
                         default:
                     }
@@ -151,6 +161,74 @@ public class MenuController implements Initializable {
         label.setText(CHOOSE_FIRST_POINT);
     }
 
+    public void triangleItemClicked() {
+        figureType = FigureType.TRIANGLE;
+        step = Step.FIRST_STEP;
+        label.setText(CHOOSE_FIRST_POINT);
+    }
+
+    public void rectangleItemClicked() {
+        figureType = FigureType.RECTANGLE;
+        step = Step.FIRST_STEP;
+        label.setText(CHOOSE_LOWER_LEFT_CORNER_POINT);
+    }
+
+    private void selectTriangleFigureParameters(final MouseEvent e) {
+        switch (step) {
+            case FIRST_STEP:
+                pointsCoordinates = new ArrayList<>();
+                pointsCoordinates.add(e.getX());
+                pointsCoordinates.add(e.getY());
+                label.setText(CHOOSE_SECOND_POINT);
+                step = Step.SECOND_STEP;
+                break;
+            case SECOND_STEP:
+                pointsCoordinates.add(e.getX());
+                pointsCoordinates.add(e.getY());
+                label.setText(CHOOSE_THIRD_POINT);
+                step = Step.THIRD_STEP;
+                break;
+            case THIRD_STEP:
+                pointsCoordinates.add(e.getX());
+                pointsCoordinates.add(e.getY());
+                figure = new Triangle(borderColorPicker.getValue(), pointsCoordinates,
+                        innerColorPicker.getValue());
+                figure.draw(anchorPane);
+                label.setText(CONGRATULATION_WITH_DREW_FIGURE);
+                step = Step.FORTH_STEP;
+                break;
+            default:
+                label.setText(DEFAULT_TEXT);
+        }
+    }
+
+    private void selectRectangleFigureParameters(final MouseEvent e) {
+        switch (step) {
+            case FIRST_STEP:
+                pointsCoordinates = new ArrayList<>();
+                pointsCoordinates.add(e.getX());
+                pointsCoordinates.add(e.getY());
+                label.setText(CHOOSE_UPPER_RIGHT_CORNER_POINT);
+                step = Step.SECOND_STEP;
+                break;
+            case SECOND_STEP:
+                pointsCoordinates.add(pointsCoordinates.get(0));
+                pointsCoordinates.add(e.getY());
+                pointsCoordinates.add(e.getX());
+                pointsCoordinates.add(e.getY());
+                pointsCoordinates.add(e.getX());
+                pointsCoordinates.add(pointsCoordinates.get(1));
+                figure = new Rectangle(borderColorPicker.getValue(), pointsCoordinates,
+                        innerColorPicker.getValue());
+                figure.draw(anchorPane);
+                label.setText(CONGRATULATION_WITH_DREW_FIGURE);
+                step = Step.THIRD_STEP;
+                break;
+            default:
+                label.setText(DEFAULT_TEXT);
+        }
+    }
+
     private void selectEllipseParameters(final MouseEvent e) {
         switch (step) {
             case FIRST_STEP:
@@ -173,7 +251,6 @@ public class MenuController implements Initializable {
                 ((Ellipse) figure).setWidthY(Math.sqrt(Math.pow(distanceX, 2) + Math.pow(distanceY, 2)));
                 figure.setBorderColor(borderColorPicker.getValue());
                 ((Ellipse) figure).setInnerColor(innerColorPicker.getValue());
-                figures.add(figure);
                 figure.draw(anchorPane);
                 label.setText(CONGRATULATION_WITH_DREW_FIGURE);
                 step = Step.FIGURE_DREW;
@@ -197,7 +274,6 @@ public class MenuController implements Initializable {
                 figure = new Circle(borderColorPicker.getValue(), center,
                         innerColorPicker.getValue(), diameter);
                 step = Step.FIGURE_DREW;
-                figures.add(figure);
                 figure.draw(anchorPane);
                 label.setText(CONGRATULATION_WITH_DREW_FIGURE);
                 break;
@@ -326,6 +402,7 @@ public class MenuController implements Initializable {
     private void selectMultilineParameters(final MouseEvent e) {
         switch (step) {
             case FIRST_STEP: {
+                points = new ArrayList<>();
                 center.setLocation(e.getX(), e.getY());
                 points.add(center);
                 label.setText(CHOOSE_SECOND_POINT);

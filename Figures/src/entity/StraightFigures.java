@@ -3,14 +3,14 @@ package entity;
 import java.awt.*;
 import javafx.scene.paint.Color;
 
-public abstract class Buffer extends Figure1D {
+public abstract class StraightFigures extends Figure1D {
     private Point firstPoint;
     private Point secondPoint;
 
-    public Buffer() {
+    public StraightFigures() {
     }
 
-    public Buffer(Point firstPoint, Point secondPoint, Color borderColor) {
+    public StraightFigures(Point firstPoint, Point secondPoint, Color borderColor) {
         this.firstPoint = firstPoint;
         this.secondPoint = secondPoint;
         this.borderColor = borderColor;

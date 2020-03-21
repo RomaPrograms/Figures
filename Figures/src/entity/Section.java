@@ -7,7 +7,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 
-public class Section extends Buffer {
+public class Section extends StraightFigures {
 
     private javafx.scene.shape.Line javaFxLine;
     private double orgSceneX;
@@ -21,7 +21,6 @@ public class Section extends Buffer {
     public Section(Point firstPoint, Point secondPoint, Color borderColor) {
         super(firstPoint, secondPoint, borderColor);
     }
-
 
     public Line getJavaFxLine() {
         return javaFxLine;

@@ -17,24 +17,6 @@ public class MultiLine extends Figure1D {
     public MultiLine() {
     }
 
-//    public MultiLine(List<Section> sections) {
-//        this.sections = sections;
-//    }
-//
-//    public List<Section> getSections() {
-//        return sections;
-//    }
-//
-//    public void setSections(List<Section> sections) {
-//        this.sections = sections;
-//    }
-//
-//    public MultiLine(Point[] points, Color borderColor) {
-//        sections = new ArrayList<>(points.length - 1);
-//        for (int i = 0; i < points.length - 1; i++)
-//            sections.add(new Section(points[i], points[i + 1], borderColor));
-//    }
-
     public Point[] getPoints() {
         return points;
     }
@@ -56,11 +38,6 @@ public class MultiLine extends Figure1D {
             arrDoubles[2 * i + 1] = points[i].getY();
         }
         javaFxPolyLine = new javafx.scene.shape.Polyline(arrDoubles);
-
-//        javaFxPolyLine.setStartX(getFirstPoint().getX());
-//        javaFxLine.setStartY(getFirstPoint().getY());
-//        javaFxLine.setEndX(getSecondPoint().getX());
-//        javaFxLine.setEndY(getSecondPoint().getY());
         javaFxPolyLine.setStroke(this.borderColor);
         javaFxPolyLine.setStrokeWidth(10);
         root.getChildren().add(javaFxPolyLine);

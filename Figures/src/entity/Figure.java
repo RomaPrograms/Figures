@@ -1,7 +1,5 @@
 package entity;
 
-
-import javafx.scene.canvas.Canvas;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
