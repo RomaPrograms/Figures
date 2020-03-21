@@ -35,9 +35,4 @@ public abstract class StraightFigures extends Figure1D {
     @Override
     public void move() {
     }
-
-    @Override
-    public Point location() {
-        return null;
-    }
 }
