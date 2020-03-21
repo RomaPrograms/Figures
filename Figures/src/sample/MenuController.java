@@ -326,6 +326,7 @@ public class MenuController implements Initializable {
                     anchorPane.getChildren().remove(((SymmetricFigure) figure).getJavafxPolygon());
                     if(((SymmetricFigure) figure).getJavafxPolygon() != null) {
                         ((SymmetricFigure) figure).getJavafxPolygon().getPoints().clear();
+                        ((SymmetricFigure) figure).getPoints().clear();
                     }
                     figure.draw(anchorPane);
                 }
